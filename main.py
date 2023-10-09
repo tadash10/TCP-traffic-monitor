@@ -5,7 +5,7 @@ from logging_handler import setup_logger, log_packet
 from packet_stats import PacketStatistics
 from alerting import PacketAlerting
 
-def packet_handler(header, data):
+def packet_handler(header, data, logger, filters, stats, alerting):
     try:
         eth_frame = IP(data)
         if eth_frame.haslayer(TCP):
@@ -42,7 +42,7 @@ if __name__ == "__main__":
 
         while True:
             header, data = cap.next()
-            packet_handler(header, data)
+            packet_handler(header, data, logger, filters, stats, alerting)
 
     except pcapy.PcapError as e:
         logger.error(f"PcapError: {e}")
