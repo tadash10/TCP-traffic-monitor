@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.log
+*.bak
+*.swp
+*.tmp
+
+# Logs
+log/
+logs/
+
+# Environment
+.env
+venv/
+.env.*
+
+# Dependencies
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+lib/
+lib64/
+bin/
+include/
+*.egg
+*.egg-info
+*.dist-info/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.log
+*.bak
+*.swp
+*.tmp
